@@ -1,0 +1,9 @@
+<h1>Look at these Pets</h1>
+<%= link_to 'Add lost pet', new_pet_path %>
+<ul>
+  <% @pets.each do |pet| %>
+    <li>
+      <%= link_to pet.name, pet_path(pet) %> | Found: <%= pet.found_days_ago %> days ago
+    </li>
+  <% end %>
+</ul>
